@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  --navy-dark: #071324;
+  --navy-main: #0b1f3a;
+  --navy-light: #1a2f4a;
+  --gold-accent: #c5a572;
+  --gold-light: #d4bc94;
+  --white: #ffffff;
+  --off-white: #f8f9fa;
+  --text-main: #333333;
+  --text-muted: #777777;
+  --glass-bg: rgba(255, 255, 255, 0.95);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --shadow-main: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--navy-main);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Glassmorphism utility classes */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-main);
+  border-radius: 12px;
+}
+
+.luxury-button {
+  background: linear-gradient(135deg, var(--navy-main) 0%, var(--navy-light) 100%);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(11, 31, 58, 0.3);
+  background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy-main) 100%);
+}
+
+.luxury-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid rgba(11, 31, 58, 0.2);
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.luxury-input:focus {
+  outline: none;
+  border-color: var(--gold-accent);
+  box-shadow: 0 0 0 2px rgba(197, 165, 114, 0.2);
+}
