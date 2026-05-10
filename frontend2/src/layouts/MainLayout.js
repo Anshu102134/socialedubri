@@ -7,17 +7,18 @@ const MainLayout = () => {
     const isAuthPage = location.pathname === '/login' || location.pathname === '/register' || location.pathname === '/';
 
     return (
-        <div className="main-layout">
+        <div className="main-layout" style={{ backgroundColor: isAuthPage ? 'transparent' : 'black', minHeight: '100vh' }}>
             {isAuthPage ? (
                 <div className="auth-bg" style={{
                     position: 'fixed',
                     top: 0,
                     left: 0,
-                    width: '100%',
-                    height: '100%',
+                    width: '100vw',
+                    height: '100vh',
                     backgroundImage: 'url("/auth-bg.jpg")',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
                     zIndex: -1
                 }}>
                     <div style={{
@@ -26,7 +27,8 @@ const MainLayout = () => {
                         left: 0,
                         width: '100%',
                         height: '100%',
-                        backgroundColor: 'rgba(0,0,0,0.4)'
+                        backgroundColor: 'rgba(0,0,0,0.5)', // Slightly darker for better form visibility
+                        backdropFilter: 'blur(2px)' // Adding a tiny blur for a premium feel
                     }}></div>
                 </div>
             ) : (
